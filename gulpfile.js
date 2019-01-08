@@ -31,7 +31,7 @@ gulp.task('content-script', function() {
     .pipe(sourcemaps.init({loadMaps: true}))
     .pipe(uglify())
     .pipe(sourcemaps.write('./'))
-    .pipe(gulp.dest('./dist/LinkedInBot'));
+    .pipe(gulp.dest('./dist/AngularExtension'));
 });
 
 gulp.task('default', gulp.series('ng-build', 'content-script'));
