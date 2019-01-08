@@ -1,0 +1,49 @@
+{
+    "manifest_version": 2,
+    "name": "LinkedInBot",
+    "version": "1.0.0",
+    "permissions": [
+        "tabs",
+        "webRequest",
+        "browsingData",
+        "storage",
+        "unlimitedStorage",
+        "http://linkedin.com/*",
+        "https://linkedin.com/*",
+        "http://*.linkedin.com/*",
+        "https://*.linkedin.com/*",
+        "http://www.linkedin.com/*",
+        "https://www.linkedin.com/*"
+    ],
+    "content_scripts": [
+        {
+            "matches": [
+                "http://linkedin.com/*",
+                "https://linkedin.com/*",
+                "http://*.linkedin.com/*",
+                "https://*.linkedin.com/*"
+            ],
+            "js": [
+                "content-script.js"
+            ]
+        }
+    ],
+    "background": {
+        "page": "index.html#/event-page"
+    },
+    "browser_action": {
+        "default_title": "Open Popup!",
+        "default_popup": "index.html#/popup"
+    },
+    "web_accessible_resources": [
+        "fonts/*.*",
+        "fonts/*.woff2",
+        "fonts/*.ttf",
+        "styles/fonts.css"
+    ],
+    "icons": {
+        "19": "assets/icons/Icon-19.png",
+        "38": "assets/icons/Icon-38.png"
+    },
+    "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'"
+}
