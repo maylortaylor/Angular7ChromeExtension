@@ -1,6 +1,8 @@
-# LinkedInBot
+# Angular7 Chrome Extension
 
+```
 run:
-`npm install --global gulp-cli`
-`npm install`
-`gulp`
+npm install --global gulp-cli
+npm install
+gulp
+```
